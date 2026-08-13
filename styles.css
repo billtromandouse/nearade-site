@@ -339,9 +339,13 @@ section.build{
   grid-template-columns:repeat(3,1fr);
   gap:24px;
 }
+.steps.steps-4{
+  grid-template-columns:repeat(2,1fr);
+}
 .step{
   position:relative;
   overflow:hidden;
+  text-align:center;
   background:var(--card);
   border:1px solid var(--border);
   border-radius:16px;
@@ -368,7 +372,7 @@ section.build{
   background:linear-gradient(90deg,var(--accent),var(--accent-2));
   display:flex;align-items:center;justify-content:center;
   font-weight:700;font-size:14px;
-  margin-bottom:16px;
+  margin:0 auto 16px;
   box-shadow:0 0 22px -4px rgba(255,92,138,.65);
 }
 .step h3{font-size:17px;margin-bottom:8px;}
@@ -573,6 +577,7 @@ footer a{color:var(--text-muted);text-decoration:underline;}
 @media (max-width:820px){
   h1{font-size:36px;}
   .steps{grid-template-columns:1fr;}
+  .steps.steps-4{grid-template-columns:1fr;}
   .value-cols{grid-template-columns:1fr;}
   .icon-grid{grid-template-columns:1fr;}
   .trust-grid{grid-template-columns:1fr 1fr;}
