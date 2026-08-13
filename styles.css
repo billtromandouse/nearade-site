@@ -71,10 +71,18 @@ h1 .accent{
   color:transparent;
 }
 .subtitle{
-  font-size:17px;
-  color:var(--text-muted);
-  max-width:480px;
+  font-size:18px;
+  font-weight:500;
+  color:var(--text);
+  max-width:520px;
   margin:0 auto 28px;
+}
+.subtitle strong{
+  font-weight:800;
+  background:linear-gradient(90deg,var(--accent),var(--accent-2));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
 }
 .hero-note{
   font-size:13px;
