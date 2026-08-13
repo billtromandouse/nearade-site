@@ -105,6 +105,15 @@ h1 .accent{
 .panel{display:none;}
 .panel.active{display:block;}
 
+.usecase-chips{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:8px;
+  max-width:440px;
+  margin:0 auto 22px;
+}
+
 .revenue-example{
   max-width:440px;
   margin:0 auto 20px;
