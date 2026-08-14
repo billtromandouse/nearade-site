@@ -472,6 +472,17 @@ section.platforms{
   font-size:12.5px;
 }
 .profile-service .price{font-weight:700;}
+.profile-card-showcase{
+  border:1px solid var(--accent);
+  background:linear-gradient(180deg, rgba(124,92,255,.1), var(--card) 45%);
+  box-shadow:0 22px 55px -28px rgba(124,92,255,.55);
+}
+.profile-card-showcase .profile-service .price{
+  background:linear-gradient(90deg,var(--accent),var(--accent-2));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
 
 section.value{
   padding:72px 0;
