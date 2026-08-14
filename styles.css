@@ -90,6 +90,13 @@ h1 .accent{
   max-width:440px;
   margin:0 auto 24px;
 }
+.pitch-line{
+  font-size:15px;
+  font-weight:700;
+  color:var(--text);
+  max-width:460px;
+  margin:0 auto 18px;
+}
 .section-stat{
   padding:0 0 64px;
   text-align:center;
