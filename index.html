@@ -23,6 +23,7 @@
       <p class="subtitle">Un moment rien qu'à toi avec les personnes que tu suis.</p>
       <p class="pitch-line">Nearade te permet de réserver un moment — appel, message, coaching... — avec les personnalités que tu suis.</p>
       <form class="signup" data-audience="communaute">
+        <input type="text" name="personality" class="signup-wide" placeholder="Quelle(s) personnalité(s) aimerais-tu retrouver ? (Insta, TikTok... — optionnel)">
         <input type="email" placeholder="ton@email.com" required>
         <button type="submit">Être prévenu en premier</button>
       </form>
@@ -146,6 +147,7 @@
   // notification par email à chaque nouvelle inscription).
   const GOOGLE_FORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLSdVNce5n4VydIMprrXnOl7bcdYPAIwErjkWQlhPjv7h3YHFcg/formResponse";
   const GOOGLE_FORM_EMAIL_FIELD = "entry.680707710";
+  const GOOGLE_FORM_PERSONALITY_FIELD = "entry.763590563";
 
   document.querySelectorAll('form.signup').forEach(form => {
     form.addEventListener('submit', (e) => {
@@ -153,10 +155,13 @@
       const audience = form.dataset.audience;
       const emailInput = form.querySelector('input[type="email"]');
       const email = emailInput ? emailInput.value : '';
+      const personalityInput = form.querySelector('input[name="personality"]');
+      const personality = personalityInput ? personalityInput.value.trim() : '';
 
       if (email) {
         const data = new FormData();
         data.append(GOOGLE_FORM_EMAIL_FIELD, email);
+        if (personality) data.append(GOOGLE_FORM_PERSONALITY_FIELD, personality);
         // mode "no-cors" : Google Forms n'autorise pas la lecture de la réponse
         // depuis un autre domaine, mais l'envoi et l'enregistrement fonctionnent.
         fetch(GOOGLE_FORM_ACTION, {

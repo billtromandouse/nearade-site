@@ -257,6 +257,7 @@ form.signup input[type="text"]{
   transition:border-color .15s ease, box-shadow .15s ease;
 }
 form.signup input::placeholder{color:var(--text-muted);}
+form.signup input.signup-wide{flex:1 1 100%;}
 form.signup input:focus{
   outline:none;
   border-color:var(--accent);
