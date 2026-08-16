@@ -1,20 +1,20 @@
 :root{
-  --bg:#0b0a12;
-  --bg-soft:#151320;
-  --card:#1a1826;
-  --text:#f5f4fa;
-  --text-muted:#a5a1b8;
-  --accent:#ff5c8a;
-  --accent-2:#7c5cff;
-  --border:#2a2738;
+  --bg:#fff8f3;
+  --bg-soft:#fff1e6;
+  --card:#ffffff;
+  --text:#2b1e1a;
+  --text-muted:#8a7268;
+  --accent:#ef4d6b;
+  --accent-2:#ff9a56;
+  --border:#f0ded0;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 body{
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   background:
-    radial-gradient(720px 400px at 15% -5%, rgba(124,92,255,.35), transparent),
-    radial-gradient(620px 340px at 90% 8%, rgba(255,92,138,.26), transparent),
-    radial-gradient(560px 320px at 50% 105%, rgba(124,92,255,.14), transparent),
+    radial-gradient(720px 400px at 15% -5%, rgba(255,154,86,.16), transparent),
+    radial-gradient(620px 340px at 90% 8%, rgba(239,77,107,.14), transparent),
+    radial-gradient(560px 320px at 50% 105%, rgba(255,154,86,.10), transparent),
     var(--bg);
   color:var(--text);
   line-height:1.5;
@@ -64,8 +64,8 @@ header{
   animation:pulseGlow 2.6s ease-in-out infinite;
 }
 @keyframes pulseGlow{
-  0%,100%{box-shadow:0 0 0 0 rgba(255,92,138,.4);}
-  50%{box-shadow:0 0 0 9px rgba(255,92,138,0);}
+  0%,100%{box-shadow:0 0 0 0 rgba(239,77,107,.35);}
+  50%{box-shadow:0 0 0 9px rgba(239,77,107,0);}
 }
 h1{
   font-size:52px;
@@ -73,7 +73,7 @@ h1{
   letter-spacing:-1.5px;
   line-height:1.1;
   margin-bottom:20px;
-  filter:drop-shadow(0 0 44px rgba(124,92,255,.3));
+  filter:drop-shadow(0 0 34px rgba(255,154,86,.2));
 }
 h1 .accent{
   background:linear-gradient(90deg,var(--accent),var(--accent-2));
@@ -166,7 +166,7 @@ h1 .accent{
 .tab-btn.active{
   background:linear-gradient(90deg,var(--accent),var(--accent-2));
   color:#fff;
-  box-shadow:0 8px 22px -8px rgba(255,92,138,.6);
+  box-shadow:0 8px 22px -8px rgba(239,77,107,.35);
 }
 
 .panel{display:none;}
@@ -211,7 +211,7 @@ h1 .accent{
   border:1.5px solid transparent;
   border-radius:16px;
   padding:18px 24px;
-  box-shadow:0 16px 40px -18px rgba(255,92,138,.55);
+  box-shadow:0 16px 40px -18px rgba(239,77,107,.3);
 }
 .revenue-example span{font-size:12.5px;color:var(--text-muted);}
 .revenue-example strong{
@@ -226,14 +226,14 @@ h1 .accent{
 
 .offer-badge{
   display:inline-block;
-  background:linear-gradient(90deg, rgba(255,92,138,.22), rgba(124,92,255,.22));
+  background:linear-gradient(90deg, rgba(239,77,107,.14), rgba(255,154,86,.14));
   border:1.5px solid var(--accent);
   color:var(--text);
   font-weight:800;
   font-size:14.5px;
   padding:10px 20px;
   border-radius:999px;
-  box-shadow:0 10px 28px -12px rgba(255,92,138,.6);
+  box-shadow:0 10px 28px -12px rgba(239,77,107,.32);
 }
 
 form.signup{
@@ -261,7 +261,7 @@ form.signup input.signup-wide{flex:1 1 100%;}
 form.signup input:focus{
   outline:none;
   border-color:var(--accent);
-  box-shadow:0 0 0 3px rgba(255,92,138,.18);
+  box-shadow:0 0 0 3px rgba(239,77,107,.16);
 }
 form.signup button{
   padding:14px 26px;
@@ -273,13 +273,13 @@ form.signup button{
   font-size:15px;
   cursor:pointer;
   white-space:nowrap;
-  box-shadow:0 12px 30px -10px rgba(255,92,138,.6);
+  box-shadow:0 12px 30px -10px rgba(239,77,107,.32);
   transition:transform .15s ease, box-shadow .15s ease, filter .15s ease;
 }
 form.signup button:hover{
   filter:brightness(1.1);
   transform:translateY(-2px);
-  box-shadow:0 16px 38px -10px rgba(255,92,138,.75);
+  box-shadow:0 16px 38px -10px rgba(239,77,107,.4);
 }
 .form-note{
   font-size:13px;
@@ -338,7 +338,7 @@ form.signup button:hover{
   bottom:-3px;right:-3px;
   width:22px;height:22px;
   border-radius:50%;
-  background:#151320;
+  background:var(--bg-soft);
   border:2px solid var(--card);
   display:flex;align-items:center;justify-content:center;
   font-size:11px;
@@ -404,7 +404,7 @@ section.build{
 .step:hover{
   transform:translateY(-5px);
   border-color:var(--accent);
-  box-shadow:0 20px 45px -22px rgba(124,92,255,.55);
+  box-shadow:0 20px 45px -22px rgba(255,154,86,.28);
 }
 .step:hover::before{opacity:1;}
 .step-num{
@@ -414,7 +414,7 @@ section.build{
   display:flex;align-items:center;justify-content:center;
   font-weight:700;font-size:14px;
   margin:0 auto 16px;
-  box-shadow:0 0 22px -4px rgba(255,92,138,.65);
+  box-shadow:0 0 22px -4px rgba(239,77,107,.3);
 }
 .step h3{font-size:17px;margin-bottom:8px;}
 .step p{color:var(--text-muted);font-size:14px;}
@@ -503,8 +503,8 @@ section.platforms{
 }
 .profile-card-showcase{
   border:1px solid var(--accent);
-  background:linear-gradient(180deg, rgba(124,92,255,.1), var(--card) 45%);
-  box-shadow:0 22px 55px -28px rgba(124,92,255,.55);
+  background:linear-gradient(180deg, rgba(255,154,86,.08), var(--card) 45%);
+  box-shadow:0 22px 55px -28px rgba(255,154,86,.25);
 }
 .profile-card-showcase .profile-service .price{
   background:linear-gradient(90deg,var(--accent),var(--accent-2));
@@ -531,8 +531,8 @@ section.value{
 }
 .value-col.highlight{
   border:1px solid var(--accent);
-  background:linear-gradient(180deg, rgba(255,92,138,.08), var(--card) 40%);
-  box-shadow:0 22px 55px -28px rgba(255,92,138,.5);
+  background:linear-gradient(180deg, rgba(239,77,107,.07), var(--card) 40%);
+  box-shadow:0 22px 55px -28px rgba(239,77,107,.24);
 }
 .value-col > h3{
   font-size:19px;
@@ -612,13 +612,13 @@ section.trust{
 .trust-item:hover{
   transform:translateY(-5px);
   border-color:var(--accent);
-  box-shadow:0 20px 45px -22px rgba(124,92,255,.55);
+  box-shadow:0 20px 45px -22px rgba(255,154,86,.28);
 }
 .trust-item:hover::before{opacity:1;}
 .trust-icon{
   width:46px;height:46px;
   border-radius:50%;
-  background:linear-gradient(135deg, rgba(255,92,138,.18), rgba(124,92,255,.18));
+  background:linear-gradient(135deg, rgba(239,77,107,.14), rgba(255,154,86,.14));
   border:1px solid var(--accent);
   display:flex;align-items:center;justify-content:center;
   font-size:20px;
