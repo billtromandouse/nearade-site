@@ -115,6 +115,14 @@ h1 .accent{
   max-width:480px;
   margin:0 auto 26px;
 }
+.field-label{
+  font-size:13px;
+  font-weight:600;
+  color:var(--text-muted);
+  max-width:440px;
+  margin:0 auto 8px;
+  text-align:left;
+}
 .section-stat{
   padding:0 0 64px;
   text-align:center;
