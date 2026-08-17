@@ -651,5 +651,9 @@ footer a{color:var(--text-muted);text-decoration:underline;}
   .value-cols{grid-template-columns:1fr;}
   .icon-grid{grid-template-columns:1fr;}
   .trust-grid{grid-template-columns:1fr 1fr;}
+  .trust-grid.trust-grid-4{grid-template-columns:1fr 1fr;}
   .profile-grid{grid-template-columns:1fr;}
+}
+@media (max-width:480px){
+  .trust-grid.trust-grid-4{grid-template-columns:1fr;}
 }
