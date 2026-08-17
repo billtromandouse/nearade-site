@@ -653,6 +653,15 @@ footer a{color:var(--text-muted);text-decoration:underline;}
   .trust-grid{grid-template-columns:1fr 1fr;}
   .trust-grid.trust-grid-4{grid-template-columns:1fr 1fr;}
   .profile-grid{grid-template-columns:1fr;}
+
+  header{padding:16px 0;}
+  .hero{padding:28px 0 32px;}
+  .badge{margin-bottom:18px;}
+  section.how,
+  section.build,
+  section.platforms,
+  section.value{padding:44px 0;}
+  section.trust{padding:36px 0 48px;}
 }
 @media (max-width:480px){
   .trust-grid.trust-grid-4{grid-template-columns:1fr;}
