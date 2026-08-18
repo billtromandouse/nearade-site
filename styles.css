@@ -23,7 +23,8 @@ a{color:inherit;}
 .wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
 
 header{
-  padding:26px 0;
+  padding-top:26px;
+  padding-bottom:26px;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -44,7 +45,8 @@ header{
 .header-link:hover{border-color:var(--accent);color:var(--text);}
 
 .hero{
-  padding:64px 0 56px;
+  padding-top:64px;
+  padding-bottom:56px;
 }
 .hero-grid{
   max-width:640px;
@@ -124,7 +126,7 @@ h1 .accent{
   text-align:left;
 }
 .section-stat{
-  padding:0 0 64px;
+  padding-bottom:64px;
   text-align:center;
 }
 .revenue-disclaimer{
@@ -352,11 +354,13 @@ form.signup button:hover{
   font-size:11px;
 }
 section.how{
-  padding:72px 0;
+  padding-top:72px;
+  padding-bottom:72px;
   border-top:1px solid var(--border);
 }
 section.build{
-  padding:72px 0;
+  padding-top:72px;
+  padding-bottom:72px;
   border-top:1px solid var(--border);
 }
 .section-title{
@@ -428,7 +432,8 @@ section.build{
 .step p{color:var(--text-muted);font-size:14px;}
 
 section.platforms{
-  padding:72px 0;
+  padding-top:72px;
+  padding-bottom:72px;
   border-top:1px solid var(--border);
 }
 .platform-badges{
@@ -522,7 +527,8 @@ section.platforms{
 }
 
 section.value{
-  padding:72px 0;
+  padding-top:72px;
+  padding-bottom:72px;
   border-top:1px solid var(--border);
 }
 .value-cols{
@@ -592,7 +598,8 @@ section.value{
 }
 
 section.trust{
-  padding:56px 0 72px;
+  padding-top:56px;
+  padding-bottom:72px;
 }
 .trust-grid{
   display:grid;
@@ -654,14 +661,14 @@ footer a{color:var(--text-muted);text-decoration:underline;}
   .trust-grid.trust-grid-4{grid-template-columns:1fr 1fr;}
   .profile-grid{grid-template-columns:1fr;}
 
-  header{padding:16px 0;}
-  .hero{padding:28px 0 32px;}
+  header{padding-top:16px;padding-bottom:16px;}
+  .hero{padding-top:28px;padding-bottom:32px;}
   .badge{margin-bottom:18px;}
   section.how,
   section.build,
   section.platforms,
-  section.value{padding:44px 0;}
-  section.trust{padding:36px 0 48px;}
+  section.value{padding-top:44px;padding-bottom:44px;}
+  section.trust{padding-top:36px;padding-bottom:48px;}
 }
 @media (max-width:480px){
   .trust-grid.trust-grid-4{grid-template-columns:1fr;}
