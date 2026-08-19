@@ -530,6 +530,18 @@ section.platforms{
   font-weight:700;
   font-size:14px;
 }
+.app-preview{
+  display:flex;
+  justify-content:center;
+}
+.app-preview img{
+  width:100%;
+  max-width:290px;
+  height:auto;
+  display:block;
+  border-radius:32px;
+  box-shadow:0 34px 70px -30px rgba(43,30,26,.32), 0 12px 34px -14px rgba(239,77,107,.22);
+}
 .profile-card-showcase{
   border:1px solid var(--accent);
   background:linear-gradient(180deg, rgba(255,154,86,.08), var(--card) 45%);
