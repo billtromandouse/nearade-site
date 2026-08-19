@@ -542,6 +542,16 @@ section.platforms{
   border-radius:32px;
   box-shadow:0 34px 70px -30px rgba(43,30,26,.32), 0 12px 34px -14px rgba(239,77,107,.22);
 }
+.app-preview-pair{
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  gap:40px;
+  flex-wrap:wrap;
+}
+.app-preview-pair .app-preview img{
+  max-width:250px;
+}
 .profile-card-showcase{
   border:1px solid var(--accent);
   background:linear-gradient(180deg, rgba(255,154,86,.08), var(--card) 45%);
@@ -688,6 +698,7 @@ footer a{color:var(--text-muted);text-decoration:underline;}
   .trust-grid{grid-template-columns:1fr 1fr;}
   .trust-grid.trust-grid-4{grid-template-columns:1fr 1fr;}
   .profile-grid{grid-template-columns:1fr;}
+  .app-preview-pair{flex-direction:column;align-items:center;gap:32px;}
 
   header{padding-top:16px;padding-bottom:16px;}
   .hero{padding-top:28px;padding-bottom:32px;}
