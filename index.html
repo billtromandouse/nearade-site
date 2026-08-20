@@ -89,8 +89,25 @@
 <section class="wrap">
   <h2 class="section-title">Retrouve tes personnalités sur Nearade</h2>
   <p class="section-sub">Voici à quoi ressemblera le profil d'une personnalité : expériences, tarifs et disponibilités, affichés clairement.</p>
-  <div class="app-preview">
-    <img src="app-preview.webp" alt="Aperçu du profil d'une personnalité sur l'application Nearade, avec ses réseaux, ses statistiques et ses expériences proposées" loading="lazy" width="562" height="1336">
+  <div class="app-carousel">
+    <button class="carousel-btn carousel-prev" type="button" aria-label="Profil précédent">‹</button>
+    <div class="app-carousel-track">
+      <div class="app-carousel-slide">
+        <img src="carousel-alex.webp" alt="Aperçu du profil d'Alex, acteur, sur l'application Nearade" loading="lazy" width="836" height="1766">
+      </div>
+      <div class="app-carousel-slide">
+        <img src="carousel-lena.webp" alt="Aperçu du profil de Léna, chanteuse, sur l'application Nearade" loading="lazy" width="836" height="1766">
+      </div>
+      <div class="app-carousel-slide">
+        <img src="carousel-neyko.webp" alt="Aperçu du profil de Neyko, créateur gaming sur Twitch, sur l'application Nearade" loading="lazy" width="836" height="1766">
+      </div>
+    </div>
+    <button class="carousel-btn carousel-next" type="button" aria-label="Profil suivant">›</button>
+    <div class="carousel-dots">
+      <button class="carousel-dot active" type="button" aria-label="Voir le profil 1"></button>
+      <button class="carousel-dot" type="button" aria-label="Voir le profil 2"></button>
+      <button class="carousel-dot" type="button" aria-label="Voir le profil 3"></button>
+    </div>
   </div>
 </section>
 
@@ -170,6 +187,44 @@
       document.getElementById('confirm-' + audience).style.display = 'block';
     });
   });
+
+  // Carrousel des exemples de profils (Alex / Léna / Neyko)
+  (function () {
+    const carousel = document.querySelector('.app-carousel');
+    if (!carousel) return;
+    const track = carousel.querySelector('.app-carousel-track');
+    const slides = Array.from(carousel.querySelectorAll('.app-carousel-slide'));
+    const dots = Array.from(carousel.querySelectorAll('.carousel-dot'));
+    const prevBtn = carousel.querySelector('.carousel-prev');
+    const nextBtn = carousel.querySelector('.carousel-next');
+    let current = 0;
+
+    function goTo(i) {
+      current = Math.max(0, Math.min(slides.length - 1, i));
+      slides[current].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
+
+    dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+    prevBtn.addEventListener('click', () => goTo(current - 1));
+    nextBtn.addEventListener('click', () => goTo(current + 1));
+
+    // Met à jour le point actif en fonction du défilement (manuel ou tactile)
+    let scrollTimeout;
+    track.addEventListener('scroll', () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        const trackCenter = track.scrollLeft + track.clientWidth / 2;
+        let closest = 0;
+        let closestDist = Infinity;
+        slides.forEach((slide, i) => {
+          const dist = Math.abs((slide.offsetLeft + slide.clientWidth / 2) - trackCenter);
+          if (dist < closestDist) { closestDist = dist; closest = i; }
+        });
+        current = closest;
+        dots.forEach((d, i) => d.classList.toggle('active', i === current));
+      }, 100);
+    });
+  })();
 </script>
 
 </body>
